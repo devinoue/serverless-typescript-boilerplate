@@ -1,0 +1,39 @@
+{
+  "name": "serverless-typescript-boilerplate",
+  "version": "1.0.0",
+  "description": "Serverless+Webpack+Typescript+ESLint+Pretter+Jest",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "source-map-support": "^0.5.10"
+  },
+  "devDependencies": {
+    "@types/aws-lambda": "^8.10.17",
+    "@types/node": "^10.12.18",
+    "eslint-plugin-prettier": "^3.1.2",
+    "fork-ts-checker-webpack-plugin": "^3.0.1",
+    "serverless": "^1.60.1",
+    "serverless-layers": "^1.4.3",
+    "serverless-webpack": "^5.2.0",
+    "serverless-offline": "^5.12.1",
+    "ts-loader": "^5.3.3",
+    "typescript": "^3.2.4",
+    "webpack": "^4.29.0",
+    "webpack-node-externals": "^1.7.2"
+    "@typescript-eslint/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/parser": "^2.12.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-config-standard-with-typescript": "^11.0.1",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-node": "^10.0.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "prettier": "^1.19.1"
+
+  },
+  "author": "",
+  "license": "MIT"
+}

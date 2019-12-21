@@ -1,0 +1,39 @@
+service:
+  name: example-serverless-type
+
+custom:
+  serverless-layers:
+    layersDeploymentBucket: example-serverless-type-serverlessdeploymentbuck-1lcbikospgd29
+  webpack:
+    webpackConfig: ./webpack.config.js
+    includeModules: true
+  stage: ${opt:stage,"dev"}
+  env:
+    dev: ${file(./config/dev.yml)}
+
+plugins:
+  - serverless-offline
+  - serverless-webpack
+  - serverless-layers
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  region: ap-northeast-1
+  apiGateway:
+    minimumCompressionSize: 1024
+  environment:
+    AWS_NODEJS_CONNECTION_REUSE_ENABLED: 1
+  stage: ${self:custom.stage}
+
+functions:
+  hello:
+    handler: functions/hello.main
+    description: Hello world!
+    environment:
+      API_KEY: ${self:custom.env.${self:custom.stage}.API_KEY}
+    events:
+      - http:
+          path: hello
+          method: get
+          cors: true
