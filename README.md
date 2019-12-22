@@ -8,16 +8,17 @@ DynamoDB系のサンプルファイルも入っています。
 
 DynamoDB Localも使用して、ローカル環境開発をまとめています。
 
-# インストール済み
+# Installed
 - Webpack
 - Serverless offline
 - Serverless Dynamo-local
 - ESLint
 - Pretter
+- Jest-ts
 
 
 Install
-```bash
+```
 > yarn
 > sls dynamodb install
 ```
