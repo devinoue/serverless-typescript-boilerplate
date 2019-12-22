@@ -2,6 +2,7 @@
 AWS Lambda Functionの(自分向けの)TypeScriptボイラープレートです。  
 
 `functions`ディレクトリ中にルーティングするように作られています。
+DynamoDB系のサンプルファイルも入っています。
 
 `.env.example`系のファイルが２つあるので、`.example`を消してからご使用ください(.env系のファイルはデフォルトで.gitignoreしています)
 
