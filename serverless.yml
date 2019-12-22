@@ -3,18 +3,18 @@ service:
 
 custom:
   serverless-layers:
-    layersDeploymentBucket: example-serverless-type-serverlessdeploymentbuck-1lcbikospgd29
+    layersDeploymentBucket: ${env:LAYERS_DEPLOYMENT_BUCKET}
   webpack:
     webpackConfig: ./webpack.config.js
     includeModules: true
   stage: ${opt:stage,"dev"}
-  env:
-    dev: ${file(./config/dev.yml)}
+
 
 plugins:
   - serverless-offline
   - serverless-webpack
   - serverless-layers
+  - serverless-dotenv-plugin
 
 provider:
   name: aws
@@ -31,7 +31,7 @@ functions:
     handler: functions/hello.main
     description: Hello world!
     environment:
-      API_KEY: ${self:custom.env.${self:custom.stage}.API_KEY}
+      API_KEY: ${env:API_KEY}
     events:
       - http:
           path: hello
