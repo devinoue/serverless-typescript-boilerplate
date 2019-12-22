@@ -5,7 +5,7 @@ AWS Lambda Functionの(自分向けの)TypeScriptボイラープレートです�
 
 `.env.example`系のファイルが２つあるので、`.example`を消してからご使用ください(.env系のファイルはデフォルトで.gitignoreしています)
 
-DynamoDBの使用を想定しています。
+DynamoDB Localも使用して、ローカル環境開発をまとめています。
 
 # インストール済み
 - Serverless offline
