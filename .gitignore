@@ -11,3 +11,9 @@ jspm_packages
 # dotenv environment variables file
 .env
 .env.production
+
+# DynamoDB local
+.dynamodb
+
+# Using backup
+bk

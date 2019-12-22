@@ -9,19 +9,21 @@ DynamoDBの使用を想定しています。
 
 # インストール済み
 - Serverless offline
+- Serverless Dynamo-local
 - ESLint
 - Pretter
 
 
 Install
 ```bash
-yarn
+> yarn
+> sls dynamodb install
 ```
 
 offline
 
 ```
-sls offline
+> sls offline
 ```
 
 
