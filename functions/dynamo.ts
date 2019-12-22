@@ -1,15 +1,15 @@
+import { getDynamoData } from './getDynamoData'
+
 import { APIGatewayProxyHandler } from 'aws-lambda'
 import 'source-map-support/register'
-
-// eslint-disable-next-line @typescript-eslint/require-await
 export const main: APIGatewayProxyHandler = async (event, _context) => {
+  const res = await getDynamoData()
+
   return {
     statusCode: 200,
     body: JSON.stringify(
       {
-        message:
-          'Go Serverless Webpack (Typescript) v1.0! Your function executed successfully!',
-        input: event,
+        message: res,
       },
       null,
       2,

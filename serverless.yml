@@ -15,6 +15,7 @@ plugins:
   - serverless-webpack
   - serverless-layers
   - serverless-dotenv-plugin
+  - serverless-dynamodb-local
 
 provider:
   name: aws
@@ -37,3 +38,15 @@ functions:
           path: hello
           method: get
           cors: true
+
+  dynamo:
+    handler: functions/dynamo.main
+    description: DynamoDB example
+    environment:
+      DYNAMO_TABLE: ${env:DYNAMO_TABLE}
+    events:
+      - http:
+          path: dynamo
+          method: get
+          cors: true
+
