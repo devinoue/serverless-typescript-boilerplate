@@ -3,6 +3,8 @@ AWS Lambda Functionの(自分向けの)TypeScriptボイラープレートです�
 
 `functions`ディレクトリ中にルーティングするように作られています。
 
+`.env.example`系のファイルが２つあるので、`.example`を消してからご使用ください(.env系のファイルはデフォルトで.gitignoreしています)
+
 DynamoDBの使用を想定しています。
 
 # インストール済み
@@ -23,8 +25,12 @@ sls offline
 ```
 
 
-deploy
-
+Development
 ```
-npx sls deploy
+> sls deploy
+```
+
+Production
+```
+> sls deploy --env production
 ```
