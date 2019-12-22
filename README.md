@@ -9,6 +9,7 @@ DynamoDB系のサンプルファイルも入っています。
 DynamoDB Localも使用して、ローカル環境開発をまとめています。
 
 # インストール済み
+- Webpack
 - Serverless offline
 - Serverless Dynamo-local
 - ESLint
